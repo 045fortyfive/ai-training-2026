@@ -1,0 +1,960 @@
+/* ============================================
+   Business Plan Template Page Styles
+   ============================================ */
+
+.page {
+    min-height: 100vh;
+    padding-top: var(--header-height);
+}
+
+/* ============================================
+   Hero Section
+   ============================================ */
+.hero {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-16) var(--space-6);
+    background: linear-gradient(180deg, #f8fafc 0%, #e0e7ff 100%);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-out;
+}
+
+.hero.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.heroContent {
+    text-align: center;
+    max-width: 800px;
+}
+
+.heroTag {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-4);
+    background: rgba(99, 102, 241, 0.1);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    border-radius: var(--radius-full);
+    color: #6366f1;
+    font-size: var(--text-sm);
+    font-weight: 500;
+    margin-bottom: var(--space-6);
+}
+
+.heroTitle {
+    font-size: clamp(40px, 8vw, 72px);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: var(--space-6);
+    color: var(--text-primary);
+}
+
+.heroTitleGradient {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.heroDescription {
+    font-size: var(--text-lg);
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: var(--space-8);
+}
+
+/* ============================================
+   Section Styles
+   ============================================ */
+.section {
+    padding: var(--space-20) 0;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--space-6);
+}
+
+/* Section Color Themes */
+.summarySection {
+    background: linear-gradient(180deg, #fef3c7 0%, #fef9e7 100%);
+}
+
+.overviewSection {
+    background: linear-gradient(180deg, #dbeafe 0%, #eff6ff 100%);
+}
+
+.marketSection {
+    background: linear-gradient(180deg, #d1fae5 0%, #ecfdf5 100%);
+}
+
+.competitorSection {
+    background: linear-gradient(180deg, #fce7f3 0%, #fdf2f8 100%);
+}
+
+.marketingSection {
+    background: linear-gradient(180deg, #e0e7ff 0%, #eef2ff 100%);
+}
+
+.organizationSection {
+    background: linear-gradient(180deg, #fce7f3 0%, #fef2f2 100%);
+}
+
+.financialSection {
+    background: linear-gradient(180deg, #d1fae5 0%, #f0fdf4 100%);
+}
+
+.riskSection {
+    background: linear-gradient(180deg, #fed7aa 0%, #fef3c7 100%);
+}
+
+.milestoneSection {
+    background: linear-gradient(180deg, #e0e7ff 0%, #f5f3ff 100%);
+}
+
+/* ============================================
+   Section Header
+   ============================================ */
+.sectionHeader {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-6);
+    margin-bottom: var(--space-12);
+}
+
+.sectionIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: var(--radius-xl);
+    color: white;
+    flex-shrink: 0;
+}
+
+.summaryIcon {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+}
+
+.overviewIcon {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+}
+
+.marketIcon {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.competitorIcon {
+    background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+}
+
+.marketingIcon {
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+}
+
+.organizationIcon {
+    background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%);
+}
+
+.financialIcon {
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+}
+
+.riskIcon {
+    background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+}
+
+.milestoneIcon {
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+}
+
+.sectionTag {
+    display: inline-block;
+    padding: var(--space-1) var(--space-3);
+    font-size: var(--text-sm);
+    font-weight: 700;
+    border-radius: var(--radius-full);
+    margin-bottom: var(--space-2);
+    color: white;
+}
+
+.summaryTag {
+    background: #f59e0b;
+}
+
+.overviewTag {
+    background: #3b82f6;
+}
+
+.marketTag {
+    background: #10b981;
+}
+
+.competitorTag {
+    background: #ec4899;
+}
+
+.marketingTag {
+    background: #6366f1;
+}
+
+.organizationTag {
+    background: #f43f5e;
+}
+
+.financialTag {
+    background: #22c55e;
+}
+
+.riskTag {
+    background: #f97316;
+}
+
+.milestoneTag {
+    background: #8b5cf6;
+}
+
+.sectionTitle {
+    font-size: var(--text-3xl);
+    font-weight: 700;
+    margin-bottom: var(--space-2);
+    color: var(--text-primary);
+}
+
+.sectionSubtitle {
+    font-size: var(--text-lg);
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* ============================================
+   Content Card
+   ============================================ */
+.contentCard {
+    background: white;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-2xl);
+    padding: var(--space-10);
+    box-shadow: var(--shadow-lg);
+}
+
+/* ============================================
+   Guidance Box
+   ============================================ */
+.guidanceBox {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-4);
+    padding: var(--space-6);
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    border-left: 4px solid #3b82f6;
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-8);
+}
+
+.guidanceIcon {
+    color: #3b82f6;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.guidanceBox h4 {
+    font-size: var(--text-md);
+    font-weight: 600;
+    margin-bottom: var(--space-2);
+    color: #1e40af;
+}
+
+.guidanceBox p {
+    font-size: var(--text-base);
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* ============================================
+   Template Content
+   ============================================ */
+.templateContent h3 {
+    font-size: var(--text-xl);
+    font-weight: 600;
+    margin-top: var(--space-8);
+    margin-bottom: var(--space-4);
+    color: var(--text-primary);
+}
+
+.templateContent h3:first-child {
+    margin-top: 0;
+}
+
+.placeholder {
+    padding: var(--space-6);
+    background: var(--bg-elevated);
+    border: 1px dashed var(--border-default);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-6);
+}
+
+.placeholder p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: var(--space-3);
+}
+
+.placeholder p:last-child {
+    margin-bottom: 0;
+}
+
+.placeholder ul {
+    list-style: disc;
+    padding-left: var(--space-6);
+    color: var(--text-secondary);
+}
+
+.placeholder ul li {
+    margin-bottom: var(--space-2);
+    line-height: 1.6;
+}
+
+.placeholder strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* ============================================
+   Check List
+   ============================================ */
+.checkList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    margin-top: var(--space-4);
+}
+
+.checkList li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    font-size: var(--text-base);
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.checkList li svg {
+    color: #10b981;
+    flex-shrink: 0;
+}
+
+/* ============================================
+   Market Size Grid
+   ============================================ */
+.marketSizeGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+    margin: var(--space-6) 0;
+}
+
+.marketSizeCard {
+    text-align: center;
+    padding: var(--space-8);
+    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+    border: 2px solid #10b981;
+    border-radius: var(--radius-xl);
+    transition: all var(--transition-base);
+}
+
+.marketSizeCard:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.marketSizeLabel {
+    font-size: var(--text-sm);
+    font-weight: 700;
+    color: #059669;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-2);
+}
+
+.marketSizeValue {
+    font-size: var(--text-3xl);
+    font-weight: 700;
+    color: #047857;
+    margin-bottom: var(--space-2);
+}
+
+.marketSizeCard p {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+}
+
+/* ============================================
+   Competitor Table
+   ============================================ */
+.competitorTable {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+}
+
+.competitorRow {
+    display: grid;
+    grid-template-columns: 150px 1fr 1fr;
+    gap: var(--space-4);
+    padding: var(--space-4);
+    background: var(--bg-elevated);
+    border-radius: var(--radius-lg);
+    border-left: 4px solid #ec4899;
+}
+
+.competitorName {
+    font-weight: 700;
+    color: var(--text-primary);
+    align-self: center;
+}
+
+.competitorStrength,
+.competitorWeakness {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* ============================================
+   Advantage Grid
+   ============================================ */
+.advantageGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+    margin-top: var(--space-6);
+}
+
+.advantageCard {
+    padding: var(--space-6);
+    background: white;
+    border: 2px solid #ec4899;
+    border-radius: var(--radius-xl);
+    text-align: center;
+    transition: all var(--transition-base);
+}
+
+.advantageCard:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: #db2777;
+}
+
+.advantageIcon {
+    color: #ec4899;
+    margin-bottom: var(--space-3);
+}
+
+.advantageCard h4 {
+    font-size: var(--text-lg);
+    font-weight: 600;
+    margin-bottom: var(--space-2);
+    color: var(--text-primary);
+}
+
+.advantageCard p {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* ============================================
+   Strategy Grid
+   ============================================ */
+.strategyGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+    margin-bottom: var(--space-6);
+}
+
+.strategyCard {
+    padding: var(--space-6);
+    background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
+    border-radius: var(--radius-lg);
+    border-left: 4px solid #6366f1;
+}
+
+.strategyCard h4 {
+    font-size: var(--text-lg);
+    font-weight: 600;
+    margin-bottom: var(--space-4);
+    color: #4f46e5;
+}
+
+.strategyCard ul {
+    list-style: none;
+    padding: 0;
+}
+
+.strategyCard ul li {
+    padding-left: var(--space-6);
+    margin-bottom: var(--space-2);
+    color: var(--text-secondary);
+    line-height: 1.6;
+    position: relative;
+}
+
+.strategyCard ul li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #6366f1;
+    font-weight: 700;
+}
+
+/* ============================================
+   KPI Grid
+   ============================================ */
+.kpiGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+    margin-top: var(--space-6);
+}
+
+.kpiCard {
+    text-align: center;
+    padding: var(--space-6);
+    background: white;
+    border: 2px solid #6366f1;
+    border-radius: var(--radius-xl);
+    transition: all var(--transition-base);
+}
+
+.kpiCard:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-lg);
+}
+
+.kpiLabel {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: var(--space-2);
+}
+
+.kpiValue {
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    color: #4f46e5;
+}
+
+/* ============================================
+   Team Grid
+   ============================================ */
+.teamGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+    margin-bottom: var(--space-6);
+}
+
+.teamCard {
+    text-align: center;
+    padding: var(--space-8);
+    background: linear-gradient(135deg, #fef2f2 0%, #fce7f3 100%);
+    border-radius: var(--radius-xl);
+    border: 2px solid #f43f5e;
+    transition: all var(--transition-base);
+}
+
+.teamCard:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.teamIcon {
+    color: #f43f5e;
+    margin-bottom: var(--space-4);
+}
+
+.teamCard h4 {
+    font-size: var(--text-md);
+    font-weight: 600;
+    color: #e11d48;
+    margin-bottom: var(--space-2);
+}
+
+.teamName {
+    font-size: var(--text-lg);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: var(--space-3);
+}
+
+.teamBio {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* ============================================
+   Financial Table
+   ============================================ */
+.financialTable {
+    margin: var(--space-6) 0;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--border-subtle);
+}
+
+.financialHeader {
+    display: grid;
+    grid-template-columns: 200px repeat(3, 1fr);
+    padding: var(--space-4) var(--space-6);
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+    color: white;
+    font-weight: 700;
+    font-size: var(--text-sm);
+}
+
+.financialRow {
+    display: grid;
+    grid-template-columns: 200px repeat(3, 1fr);
+    padding: var(--space-4) var(--space-6);
+    background: white;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.financialRow:last-child {
+    border-bottom: none;
+}
+
+.financialRow div:first-child {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.financialRow div:not(:first-child) {
+    color: var(--text-secondary);
+    text-align: right;
+}
+
+.financialTotal {
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+    font-weight: 700;
+}
+
+.financialTotal div {
+    color: #16a34a;
+}
+
+/* ============================================
+   Funding Grid
+   ============================================ */
+.fundingGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-6);
+    margin-top: var(--space-6);
+}
+
+.fundingCard {
+    text-align: center;
+    padding: var(--space-6);
+    background: white;
+    border: 2px solid #22c55e;
+    border-radius: var(--radius-xl);
+    transition: all var(--transition-base);
+}
+
+.fundingCard:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.fundingPercent {
+    font-size: var(--text-3xl);
+    font-weight: 700;
+    color: #16a34a;
+    margin-bottom: var(--space-3);
+}
+
+.fundingCard h4 {
+    font-size: var(--text-md);
+    font-weight: 600;
+    margin-bottom: var(--space-2);
+    color: var(--text-primary);
+}
+
+.fundingCard p {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* ============================================
+   Risk Grid
+   ============================================ */
+.riskGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+}
+
+.riskCard {
+    padding: var(--space-6);
+    background: white;
+    border-left: 4px solid #f97316;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-base);
+}
+
+.riskCard:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateX(4px);
+}
+
+.riskCard h4 {
+    font-size: var(--text-lg);
+    font-weight: 600;
+    margin-bottom: var(--space-3);
+    color: #ea580c;
+}
+
+.riskDescription {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.riskDescription strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* ============================================
+   Timeline
+   ============================================ */
+.timelineContainer {
+    position: relative;
+    padding-left: var(--space-8);
+}
+
+.timelineContainer::before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, #8b5cf6 0%, #7c3aed 100%);
+}
+
+.timelineItem {
+    position: relative;
+    margin-bottom: var(--space-12);
+    padding-left: var(--space-8);
+}
+
+.timelineItem:last-child {
+    margin-bottom: 0;
+}
+
+.timelineBadge {
+    position: absolute;
+    left: -8px;
+    top: 0;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+    color: white;
+    font-weight: 700;
+    font-size: var(--text-sm);
+    border-radius: var(--radius-full);
+    border: 4px solid white;
+    box-shadow: var(--shadow-md);
+}
+
+.timelineContent {
+    padding: var(--space-6);
+    background: white;
+    border: 2px solid #8b5cf6;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-sm);
+}
+
+.timelineContent h4 {
+    font-size: var(--text-xl);
+    font-weight: 600;
+    margin-bottom: var(--space-4);
+    color: #7c3aed;
+}
+
+.timelineContent ul {
+    list-style: none;
+    padding: 0;
+}
+
+.timelineContent ul li {
+    padding-left: var(--space-6);
+    margin-bottom: var(--space-2);
+    color: var(--text-secondary);
+    line-height: 1.6;
+    position: relative;
+}
+
+.timelineContent ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #8b5cf6;
+    font-weight: 700;
+}
+
+/* ============================================
+   Final Section
+   ============================================ */
+.finalSection {
+    padding: var(--space-20) 0;
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+}
+
+.finalContent {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.finalIcon {
+    color: #8b5cf6;
+    margin-bottom: var(--space-6);
+}
+
+.finalContent h3 {
+    font-size: var(--text-3xl);
+    font-weight: 700;
+    margin-bottom: var(--space-4);
+    color: white;
+}
+
+.finalContent p {
+    font-size: var(--text-lg);
+    color: #cbd5e1;
+    line-height: 1.8;
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+@media (max-width: 1024px) {
+
+    .marketSizeGrid,
+    .advantageGrid,
+    .teamGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .fundingGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .competitorRow {
+        grid-template-columns: 1fr;
+        gap: var(--space-2);
+    }
+
+    .financialHeader,
+    .financialRow {
+        grid-template-columns: 150px repeat(3, 1fr);
+        font-size: var(--text-sm);
+    }
+}
+
+@media (max-width: 640px) {
+    .sectionHeader {
+        flex-direction: column;
+        gap: var(--space-4);
+    }
+
+    .marketSizeGrid,
+    .advantageGrid,
+    .strategyGrid,
+    .kpiGrid,
+    .teamGrid,
+    .fundingGrid,
+    .riskGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .contentCard {
+        padding: var(--space-6);
+    }
+
+    .financialHeader,
+    .financialRow {
+        grid-template-columns: 100px repeat(3, 1fr);
+        font-size: var(--text-xs);
+        padding: var(--space-3);
+    }
+
+    .timelineContainer {
+        padding-left: var(--space-6);
+    }
+
+    .timelineItem {
+        padding-left: var(--space-6);
+    }
+
+    .timelineBadge {
+        width: 48px;
+        height: 48px;
+        font-size: var(--text-xs);
+    }
+}
+
+/* ============================================
+   Animations
+   ============================================ */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

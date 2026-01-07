@@ -1,0 +1,617 @@
+/* ============================================
+   Business Plan Template Form Page Styles
+   ============================================ */
+
+.page {
+    min-height: 100vh;
+    padding-top: var(--header-height);
+    background: var(--bg-elevated);
+}
+
+/* ============================================
+   Header
+   ============================================ */
+.header {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%);
+    padding: var(--space-8) var(--space-6);
+    color: white;
+    box-shadow: var(--shadow-lg);
+    position: sticky;
+    top: var(--header-height);
+    z-index: 100;
+}
+
+.headerContent {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-6);
+}
+
+.headerLeft {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    flex: 1;
+}
+
+.headerIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-lg);
+    backdrop-filter: blur(10px);
+}
+
+.headerTitle {
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    margin-bottom: var(--space-1);
+    color: white;
+}
+
+.headerSubtitle {
+    font-size: var(--text-sm);
+    color: rgba(255, 255, 255, 0.9);
+    opacity: 0.9;
+}
+
+.headerActions {
+    display: flex;
+    gap: var(--space-3);
+}
+
+.saveButton,
+.exportButton {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-5);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: var(--radius-md);
+    color: white;
+    font-weight: 500;
+    font-size: var(--text-sm);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.saveButton:hover,
+.exportButton:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.exportButton {
+    background: white;
+    color: #6366f1;
+    border-color: white;
+}
+
+.exportButton:hover {
+    background: rgba(255, 255, 255, 0.95);
+}
+
+/* ============================================
+   Container Layout
+   ============================================ */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: var(--space-8) var(--space-6);
+    display: flex;
+    gap: var(--space-8);
+    align-items: flex-start;
+}
+
+/* ============================================
+   Sidebar Navigation
+   ============================================ */
+.sidebar {
+    position: sticky;
+    top: calc(var(--header-height) + 120px);
+    width: 280px;
+    flex-shrink: 0;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: var(--space-4);
+    box-shadow: var(--shadow-sm);
+}
+
+.navItem {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-md);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    text-align: left;
+    width: 100%;
+}
+
+.navItem:hover {
+    background: var(--bg-hover);
+    color: var(--text-primary);
+}
+
+.navItemActive {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    color: white;
+    box-shadow: var(--shadow-md);
+}
+
+.navItemActive:hover {
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    color: white;
+}
+
+/* ============================================
+   Main Content
+   ============================================ */
+.main {
+    flex: 1;
+    min-width: 0;
+}
+
+/* ============================================
+   Section Styles
+   ============================================ */
+.section {
+    margin-bottom: var(--space-16);
+    scroll-margin-top: calc(var(--header-height) + 120px);
+}
+
+.sectionHeader {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-4);
+    margin-bottom: var(--space-8);
+}
+
+.sectionIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    border-radius: var(--radius-lg);
+    color: white;
+    flex-shrink: 0;
+}
+
+.sectionTag {
+    display: inline-block;
+    padding: var(--space-1) var(--space-3);
+    background: var(--bg-hover);
+    border-radius: var(--radius-full);
+    font-size: var(--text-xs);
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-2);
+}
+
+.sectionTitle {
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    margin-bottom: var(--space-2);
+    color: var(--text-primary);
+}
+
+.sectionSubtitle {
+    font-size: var(--text-base);
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* ============================================
+   Form Card
+   ============================================ */
+.formCard {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-xl);
+    padding: var(--space-8);
+    box-shadow: var(--shadow-sm);
+}
+
+.guidanceBox {
+    display: flex;
+    gap: var(--space-3);
+    padding: var(--space-4);
+    background: linear-gradient(135deg, #fef3c7 0%, #fef9e7 100%);
+    border-left: 4px solid #f59e0b;
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-6);
+}
+
+.guidanceBox svg {
+    color: #f59e0b;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.guidanceBox p {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* ============================================
+   Form Elements
+   ============================================ */
+.formGroup {
+    margin-bottom: var(--space-6);
+}
+
+.label {
+    display: block;
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--space-2);
+}
+
+.sublabel {
+    display: block;
+    font-size: var(--text-xs);
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-2);
+}
+
+.input,
+.textarea {
+    width: 100%;
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--text-base);
+    font-family: var(--font-sans);
+    color: var(--text-primary);
+    background: var(--bg-base);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+    resize: vertical;
+}
+
+.input:focus,
+.textarea:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.textarea {
+    min-height: 100px;
+    line-height: 1.6;
+}
+
+.formRow {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-4);
+}
+
+/* ============================================
+   Array Items
+   ============================================ */
+.arrayItem {
+    display: flex;
+    gap: var(--space-2);
+    align-items: flex-start;
+    margin-bottom: var(--space-3);
+}
+
+.arrayItem .input {
+    flex: 1;
+}
+
+.removeButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    background: var(--bg-hover);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-md);
+    color: #dc2626;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    flex-shrink: 0;
+}
+
+.removeButton:hover {
+    background: #fee2e2;
+    border-color: #fca5a5;
+}
+
+.addButton {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-4);
+    background: var(--bg-hover);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-md);
+    color: var(--text-primary);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.addButton:hover {
+    background: var(--bg-active);
+    border-color: var(--border-hover);
+}
+
+/* ============================================
+   Special Cards
+   ============================================ */
+.competitorCard,
+.advantageCard,
+.teamCard,
+.riskCard {
+    padding: var(--space-5);
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-4);
+}
+
+.competitorCard .formGroup,
+.advantageCard .formGroup,
+.teamCard .formGroup,
+.riskCard .formGroup {
+    margin-bottom: var(--space-4);
+}
+
+.competitorCard .formGroup:last-child,
+.advantageCard .formGroup:last-child,
+.teamCard .formGroup:last-child,
+.riskCard .formGroup:last-child {
+    margin-bottom: 0;
+}
+
+/* ============================================
+   Financial Table
+   ============================================ */
+.financialTable {
+    display: grid;
+    grid-template-columns: 150px repeat(3, 1fr);
+    gap: var(--space-2);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.financialHeader {
+    display: contents;
+}
+
+.financialHeader > div {
+    padding: var(--space-3) var(--space-4);
+    background: var(--bg-hover);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--text-primary);
+    text-align: center;
+}
+
+.financialRow {
+    display: contents;
+}
+
+.financialRow > div:first-child {
+    padding: var(--space-3) var(--space-4);
+    background: var(--bg-elevated);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.financialRow > div:not(:first-child) {
+    padding: var(--space-2);
+    background: var(--bg-base);
+}
+
+.tableInput {
+    width: 100%;
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--text-sm);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    background: var(--bg-base);
+    text-align: center;
+}
+
+.tableInput:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.1);
+}
+
+/* ============================================
+   Funding Grid
+   ============================================ */
+.fundingGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-4);
+}
+
+.fundingCard {
+    padding: var(--space-4);
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    text-align: center;
+}
+
+.fundingCard .sublabel {
+    margin-bottom: var(--space-2);
+}
+
+.fundingCard .input {
+    text-align: center;
+    font-weight: 600;
+}
+
+/* ============================================
+   Final Section
+   ============================================ */
+.finalSection {
+    margin-top: var(--space-20);
+    padding: var(--space-16) 0;
+    text-align: center;
+}
+
+.finalContent {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.finalIcon {
+    color: #10b981;
+    margin-bottom: var(--space-4);
+}
+
+.finalContent h3 {
+    font-size: var(--text-2xl);
+    margin-bottom: var(--space-4);
+    color: var(--text-primary);
+}
+
+.finalContent p {
+    font-size: var(--text-base);
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: var(--space-8);
+}
+
+.finalActions {
+    display: flex;
+    gap: var(--space-4);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.finalButton {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-4) var(--space-6);
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    border-radius: var(--radius-lg);
+    color: white;
+    font-weight: 600;
+    font-size: var(--text-base);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    box-shadow: var(--shadow-md);
+}
+
+.finalButton:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        position: static;
+        width: 100%;
+    }
+
+    .nav {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .section {
+        scroll-margin-top: var(--space-4);
+    }
+}
+
+@media (max-width: 768px) {
+    .headerContent {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .headerActions {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .saveButton,
+    .exportButton {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .formRow {
+        grid-template-columns: 1fr;
+    }
+
+    .financialTable {
+        grid-template-columns: 1fr;
+    }
+
+    .financialHeader,
+    .financialRow {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .financialHeader > div,
+    .financialRow > div {
+        padding: var(--space-2) var(--space-3);
+    }
+
+    .financialRow > div:first-child {
+        font-weight: 600;
+        background: var(--bg-hover);
+    }
+
+    .fundingGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .finalActions {
+        flex-direction: column;
+    }
+
+    .finalButton {
+        width: 100%;
+        justify-content: center;
+    }
+}
+

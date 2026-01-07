@@ -204,6 +204,20 @@
   transform: translateY(0);
 }
 
+/* Levels Section with Accordion */
+.levelsSection {
+  padding: var(--space-16) 0;
+  background: var(--bg-base);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.levelsSection.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .container {
   max-width: var(--max-width);
   margin: 0 auto;

@@ -23,10 +23,9 @@ export default function Header() {
                 </Link>
 
                 <nav className={styles.desktopNav}>
-                    <Link href="#level-1" className={styles.navLink}>Lv1 チャット型</Link>
-                    <Link href="#level-1-5" className={styles.navLink}>Lv1.5 プロンプト</Link>
-                    <Link href="#level-2" className={styles.navLink}>Lv2 NotebookLM</Link>
-                    <Link href="#level-3" className={styles.navLink}>Lv3 IDE型AI</Link>
+                    <Link href="/mvp-msp-mlp" className={styles.navLink}>戦略</Link>
+                    <Link href="/business-plan" className={styles.navLink}>事業計画書</Link>
+                    <Link href="/business-plan-template" className={styles.navLink}>事業計画書テンプレート</Link>
                 </nav>
 
                 <div className={styles.actions}>
@@ -46,17 +45,14 @@ export default function Header() {
             {mobileMenuOpen && (
                 <div className={styles.mobileMenu}>
                     <nav className={styles.mobileNav}>
-                        <Link href="#level-1" className={styles.mobileNavLink} onClick={() => setMobileMenuOpen(false)}>
-                            Lv1 チャット型AI
+                        <Link href="/mvp-msp-mlp" className={styles.mobileNavLink} onClick={() => setMobileMenuOpen(false)}>
+                            戦略
                         </Link>
-                        <Link href="#level-1-5" className={styles.mobileNavLink} onClick={() => setMobileMenuOpen(false)}>
-                            Lv1.5 プロンプト改善
+                        <Link href="/business-plan" className={styles.mobileNavLink} onClick={() => setMobileMenuOpen(false)}>
+                            事業計画書
                         </Link>
-                        <Link href="#level-2" className={styles.mobileNavLink} onClick={() => setMobileMenuOpen(false)}>
-                            Lv2 NotebookLM
-                        </Link>
-                        <Link href="#level-3" className={styles.mobileNavLink} onClick={() => setMobileMenuOpen(false)}>
-                            Lv3 IDE型AI
+                        <Link href="/business-plan-template" className={styles.mobileNavLink} onClick={() => setMobileMenuOpen(false)}>
+                            事業計画書テンプレート
                         </Link>
                     </nav>
                 </div>
